@@ -70,3 +70,120 @@ li{
     font-size: 23.5px;
     line-height: 18px;
 }
+
+.footer{
+    background-color: #FF8A8A;
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    margin: 106px 318px;
+    color: #FFFFFF;
+}
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-column{
+    display: flex;
+    flex-direction: column;
+}
+.contacts{
+    justify-content: flex-end;
+}
+.footer-logo-text{
+    margin-top: 25px;
+}
+.locations-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    gap: 5px;
+}
+.locations-container .column-item{
+    display: flex;
+    align-items: center;
+}
+.locations-container .column-item img{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+.contacts-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-bottom: 3px;
+}
+.contacts-container{
+    gap: 7px;
+}
+.footer-logo-text{
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+.locations{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+}
+.locations-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
+}
+.navigation{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 43px;
+    justify-content: space-between;
+    opacity: 0.75;
+}
+.social-links .container{
+    display: flex;
+}
+.social-link{
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+}
+.social-links .container .instagram{
+    margin-left: 15px;
+}
+.last-row{
+    margin-top: 64px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;  
+}
+.copyright{
+    opacity: 0.65;
+}
+.navigation .column-item{
+    cursor: pointer;
+}
+.social-link{
+    cursor: pointer;
+}
+.contacts-item span{
+    border-bottom: 1px solid #FFFFFF;
+}
