@@ -70,12 +70,20 @@ li {
     line-height: 18px;
 }
 
-.avatar {}
-
 .header-menu {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
     font-size: 23.5px;
     line-height: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:active {
+    color: #FF8A8A;
+    text-shadow: hsla(0, 100%, 77%, 0.5) 0px 0px 6px;
 }
