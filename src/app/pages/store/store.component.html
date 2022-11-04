@@ -1,0 +1,21 @@
+<mat-drawer-container style="z-index: 0">
+    <mat-drawer class="drawer" #drawer [mode]="mode" [opened]="opened">
+        <app-filters [Drawer]="drawer"></app-filters>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="content">
+            <div class="content-header">
+                <button mat-button *ngIf="!drawer.opened" class="filter-open" (click)="drawer.toggle()">Фільтри
+                    <mat-icon>filter_list</mat-icon>
+                </button>
+                <app-searchbar></app-searchbar>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="16px grid">
+                <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.gt-sm="33%" fxFlex.gt-lg="20%"
+                    *ngFor="let product of products">
+                    <app-store-item [product]="product"></app-store-item>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

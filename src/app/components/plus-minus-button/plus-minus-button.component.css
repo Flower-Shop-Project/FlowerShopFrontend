@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(255, 138, 138);
+    border-radius: 50px;
+
+}
+
+input {
+    min-width: 10px;
+    background-color: #fff0;
+    border: none;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
