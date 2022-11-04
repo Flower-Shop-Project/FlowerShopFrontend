@@ -1,0 +1,6 @@
+<div class="searchBar">
+    <input class="searchQueryInput" type="text" placeholder="Search" [(ngModel)]="value" (keyup.enter)="search()">
+    <button mat-icon-button class="searchQuerySubmit" type="submit" (click)="search()">
+        <mat-icon>search</mat-icon>
+    </button>
+</div>

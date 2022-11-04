@@ -1,0 +1,28 @@
+.filter {
+    background-color: rgba(255, 138, 138, 0.25);
+    border-radius: 16px;
+    margin: 16px 0 16px 16px;
+}
+
+.close {
+    border: 2px solid rgb(255, 138, 138);
+    border-radius: 20px;
+    padding: 0 8px 0 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+mat-card-title {
+    height: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-right: 32px;
+}
