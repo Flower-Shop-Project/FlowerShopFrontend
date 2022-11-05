@@ -1,15 +1,23 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PRODUCTS } from 'src/app/models/Mock/mock-products';
-import { Product } from 'src/app/models/product.model';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { StoreItem, MOCKPRODUCTS } from '../models/StoreItem.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoreService {
-  products: Array<Product> = PRODUCTS;
-  constructor() { }
+  products: Array<StoreItem> = [];
+  api: string = environment.apiUrl;
+  constructor(private http: HttpClient) { }
 
-  getProducts(): Array<Product> {
-    return this.products;
+  getAllProducts(): Observable<Array<StoreItem>> {
+    return this.http.get<Array<StoreItem>>(this.api + 'Product/GetAll');
+  }
+
+  getMockProducts(): Array<StoreItem> {
+    return MOCKPRODUCTS;
   }
 }

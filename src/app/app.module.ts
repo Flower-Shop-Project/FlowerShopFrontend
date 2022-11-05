@@ -7,8 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatInputModule} from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     MatSidenavModule,
     MatInputModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
