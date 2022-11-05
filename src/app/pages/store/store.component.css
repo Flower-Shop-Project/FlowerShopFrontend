@@ -25,3 +25,13 @@
 app-searchbar {
     flex: 1;
 }
+
+mat-drawer-container {
+    z-index: 0;
+    height: 100%;
+    background-color: white;
+}
+
+:host {
+    flex: 1;
+}
