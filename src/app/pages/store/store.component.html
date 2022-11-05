@@ -1,4 +1,4 @@
-<mat-drawer-container style="z-index: 0">
+<mat-drawer-container [autosize]="true">
     <mat-drawer class="drawer" #drawer [mode]="mode" [opened]="opened">
         <app-filters [Drawer]="drawer"></app-filters>
     </mat-drawer>

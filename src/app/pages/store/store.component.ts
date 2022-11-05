@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { Product } from 'src/app/models/product.model';
+import { StoreItem } from 'src/app/models/StoreItem.model';
 import { StoreService } from 'src/app/services/store.service';
 import { MatDrawer, MatDrawerMode, MatDrawerToggleResult } from '@angular/material/sidenav';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
@@ -12,44 +12,32 @@ import { Subscription } from 'rxjs';
 })
 
 export class StoreComponent implements OnInit {
-  constructor(private mediaObserver: MediaObserver, private storeServise: StoreService) { }
   mediaSubscription: Subscription | undefined;
-  private activeMediaQuery = '';
-  products: Array<Product> = [];
+  productsSubscription: Subscription | undefined;
+  activeMediaQuery = '';
+  products: Array<StoreItem> = [];
   mode: MatDrawerMode = "side";
   opened: boolean = true;
 
+  constructor(
+    private mediaObserver: MediaObserver,
+    private storeServise: StoreService
+  ) { }
+
   ngOnInit(): void {
-    this.products = this.storeServise.getProducts();
+    this.getProducts();
 
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
-      if (change[0].mqAlias == 'xs' || change[0].mqAlias == 'sm') {
-        console.log("xs or sm");
-        this.closeDrawer();
-      }
       change.forEach((item) => {
         this.activeMediaQuery = item ? `'${item.mqAlias}' = (${item.mediaQuery})` : '';
-        if (item.mqAlias == 'lt-sm') {
+        if (item.mqAlias == 'xs' || item.mqAlias == 'sm') {
           this.closeDrawer();
         }
         else if (item.mqAlias == 'gt-sm') {
           this.openDrawer();
         }
-        console.log('activeMediaQuery', this.activeMediaQuery);
       });
     });
-
-    // if (this.media.isActive('xs') || this.media.isActive('sm')) {
-    //   this.mode = "over";
-    //   this.opened = false;
-    //   console.log("mobile");
-    // }
-    // if (this.media.isActive('gt-sm')) {
-    //   this.mode = "side";
-    //   this.opened = true;
-    //   console.log("desktop");
-    // }
-
   }
 
   openDrawer() {
@@ -58,6 +46,20 @@ export class StoreComponent implements OnInit {
 
   closeDrawer() {
     this.opened = false;
+  }
+
+  getProducts(): void {
+    this.productsSubscription = this.storeServise.getAllProducts().subscribe((data) => {
+      data.forEach((item) => {
+        item.imageUrl = `https://localhost:7006/images/${item.imageUrl}`;
+      });
+
+      this.products = data;
+    });
+  }
+
+  getMockProducts() {
+    this.products = this.storeServise.getMockProducts();
   }
 
   ngOnDestroy(): void {
