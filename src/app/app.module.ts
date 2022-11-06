@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,7 +26,7 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
