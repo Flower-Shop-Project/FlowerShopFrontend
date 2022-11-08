@@ -31,6 +31,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
 import { ProductsPriceFilterComponent } from './pages/store/components/filters/products-price-filter/products-price-filter.component';
+import { ProductsTypeFilterComponent } from './pages/store/components/filters/products-type-filter/products-type-filter.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ProductsPriceFilterComponent } from './pages/store/components/filters/p
     PlusMinusButtonComponent,
     SearchbarComponent,
     FlowersTypeFilterComponent,
-    ProductsPriceFilterComponent
+    ProductsPriceFilterComponent,
+    ProductsTypeFilterComponent
   ],
   imports: [
     BrowserModule,
