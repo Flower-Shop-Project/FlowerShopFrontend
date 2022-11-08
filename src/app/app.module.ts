@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,8 @@ import { FiltersComponent } from './pages/store/components/filters/filters.compo
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     StoreItemComponent,
     FiltersComponent,
     PlusMinusButtonComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    FlowersTypeFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatDividerModule,
     MatListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
