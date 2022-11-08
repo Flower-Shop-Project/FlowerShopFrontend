@@ -30,6 +30,7 @@ import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-mi
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
+import { ProductsPriceFilterComponent } from './pages/store/components/filters/products-price-filter/products-price-filter.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { FlowersTypeFilterComponent } from './pages/store/components/filters/flo
     FiltersComponent,
     PlusMinusButtonComponent,
     SearchbarComponent,
-    FlowersTypeFilterComponent
+    FlowersTypeFilterComponent,
+    ProductsPriceFilterComponent
   ],
   imports: [
     BrowserModule,
