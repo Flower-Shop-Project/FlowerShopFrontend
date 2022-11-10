@@ -4,5 +4,13 @@
         <h3>Ціна</h3>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+
+      <form [formGroup]="priceFilterForm">
+        <div class="price-range-container">
+        <input class="price-filter min-price" formControlName="minValue" type="number" matInput placeholder="Від...">
+        <span>&mdash;</span>
+        <input class="price-filter max-price" formControlName="maxValue" type="number" matInput placeholder="До...">
+        </div>
+      </form>
+    
   </mat-expansion-panel>

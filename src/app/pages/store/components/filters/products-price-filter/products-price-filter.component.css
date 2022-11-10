@@ -9,3 +9,26 @@
 h3{
     margin: 0;
 }
+
+.price-range-container{
+    display: flex;
+}
+
+.price-range-container input{
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 30px;
+    outline: none;
+}
+
+.price-filter{
+    width: 50%;
+}
+
+form span{
+    align-self: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
