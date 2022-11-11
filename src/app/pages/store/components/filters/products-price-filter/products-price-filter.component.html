@@ -11,6 +11,13 @@
         <span>&mdash;</span>
         <input class="price-filter max-price" formControlName="maxValue" type="number" matInput placeholder="До...">
         </div>
+        
+        <mat-selection-list #priceOptions>
+          <mat-list-option [value]="option" checkboxPosition="before" *ngFor="let option of optionList">
+            {{option.description}}
+          </mat-list-option>
+        </mat-selection-list>
+
       </form>
     
   </mat-expansion-panel>

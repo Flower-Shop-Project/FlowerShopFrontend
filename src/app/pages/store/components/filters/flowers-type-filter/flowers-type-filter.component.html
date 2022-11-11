@@ -4,6 +4,7 @@
         <h3>Квіти</h3>
       </mat-panel-title>
     </mat-expansion-panel-header>
+    
     <input class="search-option" type="text" matInput name="searchInput"  [formControl]="searchInput" 
       placeholder="Пошук...">
     <mat-selection-list (selectionChange)="selectionChange($event)" #flowers>

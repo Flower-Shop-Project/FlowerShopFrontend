@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSelectionList, MatSelectionListChange } from '@angular/material/list';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -10,7 +11,16 @@ import { Subject, takeUntil } from 'rxjs';
 export class ProductsPriceFilterComponent implements OnInit {
   private readonly minValue = 0;
   private readonly maxValue = 100000;
-  private destroyed$: Subject<void> = new Subject();
+  @ViewChild('priceOptions') priceOptions!: MatSelectionList;
+
+
+  public optionList = [
+    {value:500, type:'max', description:'До 500'},
+    {value:3600, type:'max', description:'До 3600'},
+    {value:500, type:'min', description:'Від 500'},
+    {value:3600, type:'min', description:'Від 3600'},
+    {value:10000, type:'min', description:'Від 10000'}
+  ];
   
 
   readonly priceFilterForm = new FormGroup({
@@ -19,8 +29,9 @@ export class ProductsPriceFilterComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.priceFilterForm.valueChanges.pipe(takeUntil(this.destroyed$)).subscribe(() => {
+    this.priceFilterForm.valueChanges.subscribe(() => {
       const { minValue, maxValue } = this.priceFilterForm.controls;
+      this.priceOptions.deselectAll();
 
       switch(true){
         case maxValue.invalid:
@@ -37,10 +48,26 @@ export class ProductsPriceFilterComponent implements OnInit {
           break;
       }
     });
-  }
 
-  ngOnDestroy(): void {
-    this.destroyed$.next();
-    this.destroyed$.complete();
+  }
+  ngAfterViewInit(){
+    this.priceOptions.selectionChange.subscribe((s: MatSelectionListChange) => {    
+      
+      const { minValue, maxValue } = this.priceFilterForm.controls;
+
+      let option = s.options[0].value;
+    
+      if(option.type == 'max'){
+        maxValue.setValue(option.value);
+        minValue.setValue(this.minValue);
+      }
+      else if(option.type == 'min'){
+        minValue.setValue(option.value);
+        maxValue.setValue(this.maxValue);
+      }
+
+      this.priceOptions.deselectAll();
+      s.options[0].selected = true;
+  });
   }
 }
