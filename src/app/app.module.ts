@@ -25,6 +25,8 @@ import { FiltersComponent } from './pages/store/components/filters/filters.compo
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+//import {AgmCoreModule} from '@agm/core'
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     StoreItemComponent,
     FiltersComponent,
     PlusMinusButtonComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    DeliveryComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    //AgmCoreModule.forRoot({apiKey: 'AIzaSyBtmUHUu-7y63J535krYUcqRM73hRAIu74'})
   ],
   providers: [],
   bootstrap: [AppComponent]
