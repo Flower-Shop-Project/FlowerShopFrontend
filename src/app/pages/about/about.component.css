@@ -1,0 +1,65 @@
+h1{
+    text-align: center;  
+    font-weight: 540; 
+    margin-bottom: 1.5rem;
+}
+p{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    font-size: larger;
+    font-weight: 350;
+}
+.gap{
+    margin-bottom: 15rem;
+    margin-top: 3rem;
+    font-size: medium;
+}
+.benefits-left{
+
+    
+    padding-right: 70%;
+}
+.benefits-right{
+   
+    
+    padding-left: 70%;
+}
+.center-img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 1300px;
+}
+.benefits {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    min-width: 480px; 
+}
+.benefits_item {
+    
+    width: 40%;
+    margin-inline: 4rem;
+    display: inline-block;   
+}
+@media screen and (max-width: 1000px) {
+    
+    .benefits_item {
+    
+        width: 60%;
+        margin-inline: 4rem;
+        display: inline-block;   
+    }  
+    
+}
+
