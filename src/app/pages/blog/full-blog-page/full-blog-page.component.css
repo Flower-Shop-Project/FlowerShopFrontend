@@ -24,6 +24,12 @@ button{
     
     
 }
+.back-button{
+    position: absolute;
+    position: fixed;
+    width: 150px;
+    left: 0;
+}
 .button-text{
     padding-top: 13px;
     font-size: 14pt;

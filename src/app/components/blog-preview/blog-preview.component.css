@@ -87,4 +87,10 @@ button:hover{
 button:hover .button-text{
     color: black;
 }
+.blog-img:hover{
+    width: 99%;
+}
+h1:hover{
+    color: rgb(255, 138, 138);;
+}
 

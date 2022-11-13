@@ -1,13 +1,24 @@
 <div class="container">
-    <img class="blog-img" src="{{img}}">
-    <h1>{{title}}</h1>
+    <a (click)="goToFullBlogPage()">
+        <img class="blog-img" src="{{img}}">
+    </a>
+    
+    <a (click)="goToFullBlogPage()">
+        <h1>{{title}}</h1>
+    </a>
         <p class="date">{{date | date}}</p>
     <p>{{description}}</p>
     <div class="preview-bottom"> 
-        <button><h2 class="button-text">ЧИТАТИ ДАЛІ</h2></button>
+            <button (click)="goToFullBlogPage()">
+                <h2 class="button-text">ЧИТАТИ ДАЛІ</h2>
+            </button>
         <p class="share push date">Поділитися:</p>
-        <a class="share" href = "https://www.facebook.com/"><img class="img-link" src="./assets/img/blog/facebook.png"></a>
-        <a class="share" href="https://www.instagram.com/"><img class="img-link share" src="./assets/img/blog/instagram.png"></a>
+        <a class="share" href = "https://www.facebook.com/">
+            <img class="img-link" src="./assets/img/blog/facebook.png">
+        </a>
+        <a class="share" href="https://www.instagram.com/">
+            <img class="img-link share" src="./assets/img/blog/instagram.png">
+        </a>
     </div>  
     <span class="line"></span>
 </div>
