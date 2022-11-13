@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -27,6 +28,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
+import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { BlogPreviewComponent } from './components/blog-preview/blog-preview.com
     PlusMinusButtonComponent,
     SearchbarComponent,
     DeliveryComponent,
-    BlogPreviewComponent
+    BlogPreviewComponent,
+    FullBlogPageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { BlogPreviewComponent } from './components/blog-preview/blog-preview.com
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

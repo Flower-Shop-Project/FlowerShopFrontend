@@ -7,7 +7,7 @@ h1{
     font-size: 33pt;
     line-height: 50px;
 }
-p{
+p {
     margin-left: 2rem;
     margin-right: 2rem;
     text-align: left;
@@ -71,20 +71,28 @@ button{
 }
 
 .container{
-    width: 75%;
-    max-width: 1400px;
+    width: 70%;
+    max-width: 1700px;
     height: fit-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8rem;
+    margin-top: 3rem;
 }
 /* hover*/
 button:hover{
     background-color: white;
     border-color:rgb(255, 138, 138);
 }
+@media screen and (max-width: 1000px) {
+    
+    .container{
+        width: 90%;
+       
+    } 
+    
+}
 button:hover .button-text{
     color: black;
 }
-
