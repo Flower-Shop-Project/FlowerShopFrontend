@@ -52,6 +52,7 @@ p{
     margin-inline: 4rem;
     display: inline-block;   
 }
+
 @media screen and (max-width: 1000px) {
     
     .benefits_item {
