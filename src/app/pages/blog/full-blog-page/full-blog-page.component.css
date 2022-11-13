@@ -51,7 +51,8 @@ button{
 .preview-bottom{
     display: flex; 
     height: fit-content;
-    margin-top: 2rem;  
+    margin-top: 2rem; 
+    padding-right: 2rem; 
 }
 .share{
     margin-top: auto;
@@ -76,20 +77,31 @@ button{
     
 }
 
-.container{
+.container {
     width: 70%;
-    max-width: 1700px;
     height: fit-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8rem;
-    margin-top: 3rem;
+}
+.container-holder{
+    max-width: 1700px;  
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    background-color: white;
+}
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg");
 }
 /* hover*/
 button:hover{
     background-color: white;
     border-color:rgb(255, 138, 138);
+}
+button:hover .button-text{
+    color: rgb(255, 138, 138);
 }
 @media screen and (max-width: 1000px) {
     
@@ -98,7 +110,4 @@ button:hover{
        
     } 
     
-}
-button:hover .button-text{
-    color: black;
 }

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class FullBlogPageComponent implements OnInit {
 
-  img = './assets/img/about/benefits-1.webp'
+  img = './assets/img/about/benefits-2.webp'
   title = 'Заголовок Блогу!'
   date = new Date() 
   textContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiLorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'

@@ -24,8 +24,8 @@ p{
     font-weight: 350;
 }
 .gap{
-    margin-bottom: 15rem;
-    margin-top: 3rem;
+    padding-bottom: 15rem;
+    padding-top: 3rem;
 }
 .list-title{
     margin-top: 2rem;
@@ -37,6 +37,13 @@ p{
     margin-right: auto;
     padding: 0 20px;
     max-width: 1300px;
+    height: 100%;
+    background-color: white;
+}
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg");
 }
 /*agm-map{
     height: 400px;

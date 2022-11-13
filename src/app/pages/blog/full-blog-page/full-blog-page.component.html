@@ -1,22 +1,26 @@
-<div class="container">
-    <button (click)="goToBlog()" class="back-button">
-        <h2 class="button-text">< НАЗАД</h2>
-    </button>
-    <img class="blog-img" src="{{img}}">
-    <h1>{{title}}</h1>
-        <p class="date">{{date | date}}</p>
-    <p>{{textContent}}</p>
-    <div class="preview-bottom"> 
-        <button (click)="goToBlog()">
-            <h2 class="button-text">< НАЗАД</h2>
-        </button>
-        <p class="share push date">Поділитися:</p>
-        <a class="share" href = "https://www.facebook.com/">
-            <img class="img-link" src="./assets/img/blog/facebook.png">
-        </a>
-        <a class="share" href="https://www.instagram.com/">
-            <img class="img-link share" src="./assets/img/blog/instagram.png">
-        </a>
-    </div>  
-    <span class="line"></span>
+<div class="backGround">
+    <div class="container-holder container">
+        <div class="container">
+            <button (click)="goToBlog()" class="back-button">
+                <h2 class="button-text">< НАЗАД</h2>
+            </button>
+            <img class="blog-img" src="{{img}}">
+            <h1>{{title}}</h1>
+                <p class="date">{{date | date}}</p>
+            <p>{{textContent}}</p>
+            <span class="line"></span>
+            <div class="preview-bottom"> 
+                <button (click)="goToBlog()">
+                    <h2 class="button-text">< НАЗАД</h2>
+                </button>
+                <p class="share push date">Поділитися:</p>
+                <a class="share" href = "https://www.facebook.com/">
+                    <img class="img-link" src="./assets/img/blog/facebook.png">
+                </a>
+                <a class="share" href="https://www.instagram.com/">
+                    <img class="img-link share" src="./assets/img/blog/instagram.png">
+                </a>
+            </div>          
+        </div>
+    </div>
 </div>

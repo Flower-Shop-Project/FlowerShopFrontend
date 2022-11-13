@@ -85,12 +85,12 @@ button:hover{
     border-color:rgb(255, 138, 138);
 }
 button:hover .button-text{
-    color: black;
-}
-.blog-img:hover{
-    width: 99%;
+    color: rgb(255, 138, 138);
 }
 h1:hover{
-    color: rgb(255, 138, 138);;
+    color: rgb(255, 138, 138);
+}
+.blog-img:hover{
+    width: 99.5%;
 }
 
