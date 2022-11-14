@@ -5,13 +5,16 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { ConstructorComponent } from './pages/constructor/constructor.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StoreComponent } from './pages/store/store.component';
-
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'store', component: StoreComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'constructor', component: ConstructorComponent },
+  { path: 'delivery', component: DeliveryComponent },
+  { path: 'fullBlog', component: FullBlogPageComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

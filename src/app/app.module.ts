@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
+
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
 import { ProductsPriceFilterComponent } from './pages/store/components/filters/products-price-filter/products-price-filter.component';
 import { ProductsTypeFilterComponent } from './pages/store/components/filters/products-type-filter/products-type-filter.component';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
+import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
 
 
 @NgModule({
@@ -51,6 +58,9 @@ import { ProductsTypeFilterComponent } from './pages/store/components/filters/pr
     FlowersTypeFilterComponent,
     ProductsPriceFilterComponent,
     ProductsTypeFilterComponent
+    DeliveryComponent,
+    BlogPreviewComponent,
+    FullBlogPageComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +79,9 @@ import { ProductsTypeFilterComponent } from './pages/store/components/filters/pr
     MatDividerModule,
     MatListModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    RouterModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
