@@ -49,7 +49,8 @@ export class StoreComponent implements OnInit {
   }
 
   getProducts(): void {
-    this.productsSubscription = this.storeServise.getAllProducts().subscribe((data) => {
+    this.storeServise.getAllProducts();
+    this.productsSubscription = this.storeServise.products$.subscribe((data) => {
       data.forEach((item) => {
         item.imageUrl = `https://localhost:7006/images/${item.imageUrl}`;
       });
