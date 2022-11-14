@@ -33,6 +33,7 @@ export class ProductsPriceFilterComponent implements OnInit {
     this.priceFilterForm.valueChanges.subscribe(() => {
       const { minValue, maxValue } = this.priceFilterForm.controls;
       this.priceOptions.deselectAll();
+      console.log('selected min value:', minValue.value,'selected max value:', maxValue.value);
 
       switch(true){
         case minValue.invalid:
@@ -59,14 +60,15 @@ export class ProductsPriceFilterComponent implements OnInit {
       const { minValue, maxValue } = this.priceFilterForm.controls;
 
       let option = s.options[0].value;
+      console.log('priceOptionsHandler');
     
       if(option.type == 'max'){
+        minValue.setValue(this.minValue, {emitEvent: false});
         maxValue.setValue(option.value);
-        minValue.setValue(this.minValue);
       }
       else if(option.type == 'min'){
+        maxValue.setValue(this.maxValue, {emitEvent: false});
         minValue.setValue(option.value);
-        maxValue.setValue(this.maxValue);
       }
 
       this.priceOptions.deselectAll();
