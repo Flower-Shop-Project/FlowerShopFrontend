@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
+
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,6 +13,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,9 +32,13 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
+import { ProductsPriceFilterComponent } from './pages/store/components/filters/products-price-filter/products-price-filter.component';
+import { ProductsTypeFilterComponent } from './pages/store/components/filters/products-type-filter/products-type-filter.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
-//import {AgmCoreModule} from '@agm/core'
+import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
+import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +54,12 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
     FiltersComponent,
     PlusMinusButtonComponent,
     SearchbarComponent,
-    DeliveryComponent
+    FlowersTypeFilterComponent,
+    ProductsPriceFilterComponent,
+    ProductsTypeFilterComponent,
+    DeliveryComponent,
+    BlogPreviewComponent,
+    FullBlogPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,9 +72,15 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
     MatIconModule,
     MatSidenavModule,
     MatInputModule,
+    MatExpansionModule,
     FormsModule,
     HttpClientModule,
-    //AgmCoreModule.forRoot({apiKey: 'AIzaSyBtmUHUu-7y63J535krYUcqRM73hRAIu74'})
+    MatDividerModule,
+    MatListModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    RouterModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

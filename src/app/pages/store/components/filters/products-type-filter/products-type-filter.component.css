@@ -1,0 +1,10 @@
+.mat-expansion-panel-header{
+    padding-right: 8px;
+    padding-left: 0;
+}
+.mat-expansion-panel{
+    background-color: initial;
+}
+h3{
+    margin: 0;
+}

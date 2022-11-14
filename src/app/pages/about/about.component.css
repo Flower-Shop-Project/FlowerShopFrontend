@@ -11,8 +11,8 @@ p{
     font-weight: 350;
 }
 .gap{
-    margin-bottom: 15rem;
-    margin-top: 3rem;
+    padding-bottom: 15rem;
+    padding-top: 3rem;
     font-size: medium;
 }
 .benefits-left{
@@ -38,6 +38,14 @@ p{
     margin-right: auto;
     text-align: center;
     max-width: 1300px;
+    background-color:white;
+    height: 100%;
+}
+/*  backGround  */
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg");  
 }
 .benefits {
     -webkit-box-align: start;
@@ -52,6 +60,7 @@ p{
     margin-inline: 4rem;
     display: inline-block;   
 }
+
 @media screen and (max-width: 1000px) {
     
     .benefits_item {
