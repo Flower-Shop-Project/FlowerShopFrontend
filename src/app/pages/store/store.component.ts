@@ -1,8 +1,8 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StoreItem } from 'src/app/models/StoreItem.model';
 import { StoreService } from 'src/app/services/store.service';
-import {MatDrawerMode} from '@angular/material/sidenav';
-import {MediaObserver } from '@angular/flex-layout';
+import { MatDrawerMode } from '@angular/material/sidenav';
+import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 
 @Component({
