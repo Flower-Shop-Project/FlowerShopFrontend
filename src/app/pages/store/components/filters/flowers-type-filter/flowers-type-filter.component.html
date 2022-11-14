@@ -1,0 +1,15 @@
+<mat-expansion-panel class="mat-elevation-z0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Квіти</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    
+    <input class="search-option" type="text" matInput name="searchInput"  [formControl]="searchInput" 
+      placeholder="Пошук...">
+    <mat-selection-list (selectionChange)="selectionChange($event)" #flowers>
+      <mat-list-option checkboxPosition="before" *ngFor="let flower of filteredOptions" [selected]="flowersSet.get(flower)" [value]="flower">
+        {{flower}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-expansion-panel>

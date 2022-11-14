@@ -1,0 +1,23 @@
+<mat-expansion-panel class="mat-elevation-z0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Ціна</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+      <form [formGroup]="priceFilterForm">
+        <div class="price-range-container">
+        <input class="price-filter min-price" formControlName="minValue" type="number" matInput placeholder="Від...">
+        <span>&mdash;</span>
+        <input class="price-filter max-price" formControlName="maxValue" type="number" matInput placeholder="До...">
+        </div>
+        
+        <mat-selection-list #priceOptions>
+          <mat-list-option [value]="option" checkboxPosition="before" *ngFor="let option of optionList">
+            {{option.description}}
+          </mat-list-option>
+        </mat-selection-list>
+
+      </form>
+    
+  </mat-expansion-panel>
