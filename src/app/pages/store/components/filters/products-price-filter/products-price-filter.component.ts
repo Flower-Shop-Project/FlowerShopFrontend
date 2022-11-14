@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSelectionList, MatSelectionListChange } from '@angular/material/list';
 import { Subject, takeUntil } from 'rxjs';
@@ -10,8 +10,9 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class ProductsPriceFilterComponent implements OnInit {
   private readonly minValue = 0;
-  private readonly maxValue = 100000;
+  private readonly maxValue = null;
   @ViewChild('priceOptions') priceOptions!: MatSelectionList;
+  @Output() PriceRangeChanged: EventEmitter<any> = new EventEmitter<any>();
 
 
   public optionList = [
@@ -25,7 +26,7 @@ export class ProductsPriceFilterComponent implements OnInit {
 
   readonly priceFilterForm = new FormGroup({
     minValue: new FormControl<number>(this.minValue, Validators.min(this.minValue)),
-    maxValue: new FormControl<number>(this.maxValue, Validators.max(this.maxValue)),
+    maxValue: new FormControl<number|null>(null),
   });
 
   ngOnInit(): void {
@@ -34,19 +35,21 @@ export class ProductsPriceFilterComponent implements OnInit {
       this.priceOptions.deselectAll();
 
       switch(true){
-        case maxValue.invalid:
-          maxValue.setValue(this.maxValue);
-          break;
         case minValue.invalid:
           minValue.setValue(this.minValue);
           break;
-        case minValue.value! > maxValue.value!:
+        case minValue.value! > maxValue.value! && maxValue.value != null:
           minValue.setValue(maxValue.value);
           break;
-        case maxValue.value! < minValue.value!:
+        case maxValue.value! < minValue.value! && maxValue.value != null:
           maxValue.setValue(minValue.value);
           break;
       }
+
+      this.PriceRangeChanged.emit({
+        minPrice:minValue.value,
+        maxPrice:maxValue.value
+      });
     });
 
   }

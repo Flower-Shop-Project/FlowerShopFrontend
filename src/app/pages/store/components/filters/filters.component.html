@@ -13,7 +13,7 @@
 
                 <mat-divider></mat-divider>
 
-              <app-products-price-filter></app-products-price-filter>
+              <app-products-price-filter (PriceRangeChanged)="PriceRangeChangeHandler($event)"></app-products-price-filter>
 
                 <mat-divider></mat-divider>
 
