@@ -28,7 +28,6 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { HttpClientModule } from '@angular/common/http';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
 import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
@@ -66,7 +65,7 @@ import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-pag
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
     SwiperModule,
   ],
   providers: [],
