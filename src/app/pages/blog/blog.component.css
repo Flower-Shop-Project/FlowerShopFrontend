@@ -1,0 +1,15 @@
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg"); 
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    text-align: center;
+    max-width: 1500px;
+    height: 100%;
+    background-color:white;
+}
+

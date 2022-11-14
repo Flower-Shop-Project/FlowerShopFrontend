@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'swiper/angular';
+
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +28,11 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
+import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
+
 
 
 @NgModule({
@@ -41,7 +48,10 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     StoreItemComponent,
     FiltersComponent,
     PlusMinusButtonComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    DeliveryComponent,
+    BlogPreviewComponent,
+    FullBlogPageComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +66,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
     SwiperModule,
   ],
   providers: [],
