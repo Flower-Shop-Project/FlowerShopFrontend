@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
+
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -29,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
 import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
+
 
 
 @NgModule({
@@ -63,6 +67,7 @@ import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-pag
     FormsModule,
     HttpClientModule,
     RouterModule
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

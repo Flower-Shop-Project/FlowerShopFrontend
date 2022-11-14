@@ -1,1 +1,75 @@
-<p>home works!</p>
+<div class="banner">
+    <swiper #banner class="banner-swiper" [loop]="true" [allowTouchMove]="true"
+        [autoplay]="{ delay: 500, disableOnInteraction: false }" [pagination]="{ clickable: true }" [navigation]="true">
+        <div #prev class="swiper-button-prev"></div>
+        <div #next class="swiper-button-next"></div>
+        <ng-template data-swiper-autoplay="8000" class="swiper-slide" swiperSlide>
+            <div class="slide1 slide-content">
+                <div class="container">
+                    <div class="text">
+                        <p class="title">В НАЯВНОСТІ</p>
+                        <h1>БУКЕТИ ТЮЛЬПАНІВ</h1>
+                        <p class="description">Від <span style="font-weight: 599; font-size:30px;">399</span> грн</p>
+                        <button mat-raised-button class="banner-button" (click)="bannerButton1()">
+                            Перейти до категорії
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template data-swiper-autoplay="7500" class="swiper-slide" swiperSlide>
+            <div class="slide2 slide-content">
+                <div class="container">
+                    <div class="text">
+                        <p class="title">Не відкладайте радість на завтра
+                        </p>
+                        <h1>букети неперевершеної троянди</h1>
+
+                        <p class="description2">Знижка <span style="font-weight: 599; font-size:30px">до 25%</span> грн
+                        </p>
+                        <button mat-raised-button class="banner-button" (click)="bannerButton1()">
+                            Перейти до категорії
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
+<div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="45px" #categories class="categories">
+    <div fxFlex.gt-sm=" 33%" class="category">
+        <img src="assets/img/cat1.jpg" alt="" style="width: 100%">
+        <div class="category-text">
+            <p>Кошики</p>
+        </div>
+    </div>
+    <div fxFlex="33%" class="category">
+        <img src="assets/img/cat2.jpg" alt="" style="width: 100%">
+        <div class="category-text">
+            <p>Букети</p>
+        </div>
+    </div>
+    <div fxFlex="33%" class="category">
+        <img src="assets/img/cat3.jpg" alt="" style="width: 100%">
+        <div class="category-text">
+            <p>Квіти в горщиках</p>
+        </div>
+    </div>
+</div>
+<div>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+    <h5>this is some text</h5>
+</div>

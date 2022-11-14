@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { StoreItem } from 'src/app/models/StoreItem.model';
 import { StoreService } from 'src/app/services/store.service';
-import { MatDrawer, MatDrawerMode, MatDrawerToggleResult } from '@angular/material/sidenav';
-import { MediaChange, MediaObserver } from '@angular/flex-layout';
+import {MatDrawerMode} from '@angular/material/sidenav';
+import {MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -25,7 +25,7 @@ export class StoreComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getProducts();
+    this.getMockProducts();
 
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
