@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-top-baner',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageTopBanerComponent implements OnInit {
 
-  protected title = "FlowerShop"
+   public title = "FlowerShop > " 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  }
-  setTitleText(newTitle:string): void{
-    this.title = newTitle;
+
+    for(var val of this.router.url){
+      if(val=='/')
+        continue;
+      this.title +=val;
+    }
   }
 }

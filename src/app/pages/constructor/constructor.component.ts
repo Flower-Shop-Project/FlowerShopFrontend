@@ -4,7 +4,6 @@ import { StoreService } from 'src/app/services/store.service';
 import { MatDrawerMode } from '@angular/material/sidenav';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
-import { PageTopBanerComponent } from 'src/app/components/page-top-baner/page-top-baner.component';
 
 
 @Component({
@@ -21,6 +20,7 @@ export class ConstructorComponent implements OnInit {
   products: Array<StoreItem> = [];
   mode: MatDrawerMode = "side";
   opened: boolean = true;
+
 
   constructor(
     private mediaObserver: MediaObserver,
