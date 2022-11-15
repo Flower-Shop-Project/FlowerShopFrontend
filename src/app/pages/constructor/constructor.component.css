@@ -7,21 +7,21 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 3rem;
     text-align: center;
     max-width: 1700px;
     height: fit-content;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
 }
 
 .constructor-navigation-container{
     width: 100%;
-    height: 110px;
+    height: fit-content;
+    padding-top: 5.15rem;
     position: relative;
 }
 
 .constructor-navigation{
-    width: 70%;
+    width: 70.01%;
     height: 80px;
     position: absolute;
     right: 0;
@@ -60,7 +60,7 @@ h1{
 
 .bouquet-list-container{
     width: 30%;
-    height: fit-content;
+    height: 100%;
 }
 
 .bouquet-list{
@@ -76,7 +76,9 @@ h1{
 .bouquet-list-title{
     padding-top:60px;
     padding-bottom: 40px;
-    font-size: 26pt;
+    font-size: 30pt;
+    color: #FF99A5;
+    font-weight: 800;
 }
 
 .buttons-container{
@@ -114,6 +116,8 @@ button{
 .products-container{
     width: 70%;
     height: fit-content;
+    border-left: 1px solid #d1d1d1;
+
 }
 
 .products{

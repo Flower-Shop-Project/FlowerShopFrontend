@@ -4,6 +4,7 @@ import { StoreService } from 'src/app/services/store.service';
 import { MatDrawerMode } from '@angular/material/sidenav';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { PageTopBanerComponent } from 'src/app/components/page-top-baner/page-top-baner.component';
 
 
 @Component({
@@ -28,7 +29,6 @@ export class ConstructorComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMockProducts();
-
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
         this.activeMediaQuery = item ? `'${item.mqAlias}' = (${item.mediaQuery})` : '';

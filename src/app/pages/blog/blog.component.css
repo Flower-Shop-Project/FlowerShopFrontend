@@ -3,13 +3,22 @@
     width: 100%;
     background-image: url("\src\assets\img\blog\background.jpg"); 
 }
+
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 3rem;
     text-align: center;
     max-width: 1500px;
     height: 100%;
     background-color:white;
+}
+
+.searchbar-container{
+   height: fit-content;
+   margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    width: 80%;
 }
 
