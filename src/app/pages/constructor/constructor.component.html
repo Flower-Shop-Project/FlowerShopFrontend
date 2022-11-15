@@ -2,7 +2,15 @@
     <div class="container">
         <div class = "constructor-navigation-container">
             <div class = "constructor-navigation">
-                    
+                <div class="constructor-navigation-button">
+                    <h1>Квіти</h1>
+                </div>
+                <div class="constructor-navigation-button">
+                    <h1>Обгортка</h1>
+                </div> 
+                <div class="constructor-navigation-button">
+                    <h1>Мотузка</h1>
+                </div>  
             </div>
         </div>
         <div class="constructor-container">
@@ -10,7 +18,14 @@
 
             </div>
             <div class="products-container">
-                
+                <div class="products">
+                    <div fxLayout="row wrap" fxLayoutGap="30px grid">
+                        <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.gt-sm="33%" 
+                            *ngFor="let product of products">
+                            <app-store-item [product]="product"></app-store-item>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>
