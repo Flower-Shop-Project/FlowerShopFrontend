@@ -1,0 +1,64 @@
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg"); 
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    text-align: center;
+    max-width: 1900px;
+    height: fit-content;
+    background-color:white;
+}
+
+.constructor-navigation-container{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+.constructor-navigation{
+    width: 70%;
+    height: 80px;
+    background-color: blue;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+
+}
+
+.constructor-container{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3rem;
+    background-color: aqua;
+    
+
+}
+
+.bouquet-list{
+    width: 30%;
+    height: 1500px;
+    background-color: blueviolet;
+    display: inline-block;  
+}
+
+.products-container{
+    width: 70%;
+    height: 1500px;
+    background-color: rgb(89, 14, 160);
+    display: inline-block;  
+}
+@media screen and (max-width: 1200px) {
+    
+    .bouquet-list,  .constructor-navigation , .products-container{
+        width: 100%;
+        display: block;
+    }
+
+     
+ }
