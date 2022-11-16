@@ -21,12 +21,15 @@ export class HomeComponent implements OnInit {
     this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
         this.activeMediaQuery = item ? `'${item.mqAlias}' = (${item.mediaQuery})` : '';
-        
+
       });
     });
   }
 
   bannerButton1() {
     console.log('bannerButton1');
+  }
+  bannerButton2() {
+    console.log('bannerButton2');
   }
 }

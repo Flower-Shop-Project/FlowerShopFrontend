@@ -29,7 +29,7 @@ app-searchbar {
 mat-drawer-container {
     z-index: 0;
     height: 100%;
-    background-color: white;
+    background-color: rgba(255, 138, 138, 0.05);
 }
 
 :host {

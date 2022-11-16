@@ -1,11 +1,13 @@
-<img [src]="product?.imageUrl" style="width: 100%">
-<div class="info">
-    <p>{{product?.name}}</p>
-    <h2>{{product?.price | currency}}</h2>
-</div>
-<div class="actions">
-    <app-plus-minus-button></app-plus-minus-button>
-    <button mat-button mat-icon-button class="addToCart" (click)="addToCart()">В кошик
-        <mat-icon>shopping_cart</mat-icon>
-    </button>
+<div class="card" [@itemState]="state" (mouseenter)="hover()" (mouseleave)="leave()">
+    <img class="clickable" [src]="product?.imageUrl" style="width: 100%" (click)="onClick()">
+    <div class="info">
+        <p class="clickable" (click)="onClick()">{{product?.name}}</p>
+        <h2>{{product?.price | currency}}</h2>
+    </div>
+    <div class="actions" [ngClass]="{'hidden': actionsHidden}">
+        <app-plus-minus-button></app-plus-minus-button>
+        <button mat-button mat-icon-button class="addToCart" (click)="addToCart()">В кошик
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </div>
 </div>
