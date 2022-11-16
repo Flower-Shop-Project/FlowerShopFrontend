@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./plus-minus-button.component.css']
 })
 export class PlusMinusButtonComponent implements OnInit {
-  value: number = 0;
+  value: number = 1;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class PlusMinusButtonComponent implements OnInit {
   }
 
   decrement() {
-    if (this.value > 0) {
+    if (this.value > 1) {
       this.value--;
       this.valueChanged();
     }
@@ -28,7 +28,7 @@ export class PlusMinusButtonComponent implements OnInit {
 
   valueChanged() {
     if (this.value == null) {
-      this.value = 0;
+      this.value = 1;
     }
     if (this.value > 100) {
       this.value = 100;

@@ -100,6 +100,12 @@ h1{
     color: rgb(255, 138, 138);
 }
 
+.check-amount-text{
+    text-align: left;
+    margin-left: 15%;
+    padding:2rem;
+}
+
 .button:hover{
     color: #FF8A8A;
     background-color: rgb(238, 238, 238);
@@ -112,7 +118,7 @@ h1{
     .order-button{
         margin-right: 5%;
     }
-    .continue-button{
+    .continue-button, .check-amount-text{
         margin-left: 5%;
     }
     

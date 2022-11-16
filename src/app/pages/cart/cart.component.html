@@ -9,14 +9,19 @@
                 <p class="button-text">очистити корзину</p>
             </div>
         </div>
+
         <div class="data-container">
-            <p class="button-text">тут будуть товари</p>
-            <p class="button-text">тут будуть товари</p>
-            <p class="button-text">тут будуть товари</p>
-            <p class="button-text">тут будуть товари</p>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
         </div>
+        <h1 class="check-amount-text">{{checkAmountText}}</h1>
+
         <div class="top-block">
-            <div class="button continue-button">
+            <div class="button continue-button" (click)="goToStore()">
                 <p class="button-text continue-text">продовжити покупки</p>
             </div>
 
