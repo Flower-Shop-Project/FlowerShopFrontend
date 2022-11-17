@@ -14,57 +14,80 @@ import { Subscription } from 'rxjs';
 
 
 export class ConstructorComponent implements OnInit {
-  mediaSubscription: Subscription | undefined;
-  productsSubscription: Subscription | undefined;
-  activeMediaQuery = '';
-  products: Array<StoreItem> = [];
-  mode: MatDrawerMode = "side";
-  opened: boolean = true;
+ 
+  flowerSubPage = false;
+  wrapperSubPage = false;
+  ropeSubPage = false;
+  currentSubPageIndex = 0;
+  flowerNavButtonStyle: string ='';
+  wraperNavButtonStyle: string ='';
+  ropeNavButtonStyle: string ='';
 
-
-  constructor(
-    private mediaObserver: MediaObserver,
-    private storeServise: StoreService
-  ) { }
+  constructor(private mediaObserver: MediaObserver, private storeServise: StoreService) 
+  { 
+    this.resetSubPages();
+    this.openSubPage(0);
+  }
 
   ngOnInit(): void {
-    this.getMockProducts();
-    this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
-      change.forEach((item) => {
-        this.activeMediaQuery = item ? `'${item.mqAlias}' = (${item.mediaQuery})` : '';
-        if (item.mqAlias == 'xs' || item.mqAlias == 'sm') {
-          this.closeDrawer();
+
+
+  }
+  nextStepButton():void {
+    this.stepButton(true); 
+  }
+
+  previousStepButton():void {
+    this.stepButton(false);
+  }
+
+  toCartButton(){
+    this.openSubPage(0);
+  }
+
+  openSubPage(index:number)
+  {
+    this.resetSubPages();
+
+    this.currentSubPageIndex = index;
+
+    if(index==0)
+    {
+      this.flowerNavButtonStyle = 'constructor-navigation-button-selected';
+      this.flowerSubPage = true;
+    }
+      else if(index==1){
+        this.wraperNavButtonStyle = 'constructor-navigation-button-selected';
+        this.wrapperSubPage = true;
+      }
+        else if(index==2){
+          this.ropeNavButtonStyle = 'constructor-navigation-button-selected';
+          this.ropeSubPage = true;
         }
-        else if (item.mqAlias == 'gt-sm') {
-          this.openDrawer();
-        }
-      });
-    });
+          else throw new Error('incorect index! must be in range 0-2');
+
   }
 
-  openDrawer() {
-    this.opened = true;
+  private stepButton(isNextButton: boolean)
+  {
+    isNextButton ? this.currentSubPageIndex++ : this.currentSubPageIndex--;
+    if(this.currentSubPageIndex < 0)
+        this.currentSubPageIndex = 0;
+    if(this.currentSubPageIndex > 2)
+        this.currentSubPageIndex = 2;  
+
+    this.openSubPage(this.currentSubPageIndex);
   }
 
-  closeDrawer() {
-    this.opened = false;
+  private resetSubPages():void
+  {
+    this.flowerSubPage = false;
+    this.ropeSubPage = false;
+    this.wrapperSubPage = false;
+    this.flowerNavButtonStyle = 'constructor-navigation-button';
+    this.wraperNavButtonStyle = 'constructor-navigation-button';
+    this.ropeNavButtonStyle =  'constructor-navigation-button';
+
   }
 
-  getProducts(): void {
-    this.productsSubscription = this.storeServise.getAllProducts().subscribe((data) => {
-      data.forEach((item) => {
-        item.imageUrl = `https://localhost:7006/images/${item.imageUrl}`;
-      });
-
-      this.products = data;
-    });
-  }
-
-  getMockProducts() {
-    this.products = this.storeServise.getMockProducts();
-  }
-
-  ngOnDestroy(): void {
-    this.mediaSubscription?.unsubscribe();
-  }
 }

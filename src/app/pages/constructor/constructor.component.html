@@ -4,13 +4,13 @@
         <!-- navigation-container -->
         <div class = "constructor-navigation-container">
             <div class = "constructor-navigation">
-                <div class="constructor-navigation-button">
+                <div [ngClass]="[flowerNavButtonStyle]" (click)="openSubPage(0)">
                     <h1>Квіти</h1>
                 </div>
-                <div class="constructor-navigation-button">
+                <div [ngClass]="[wraperNavButtonStyle]" (click)="openSubPage(1)">
                     <h1>Обгортка</h1>
                 </div> 
-                <div class="constructor-navigation-button">
+                <div [ngClass]="[ropeNavButtonStyle]" (click)="openSubPage(2)">
                     <h1>Мотузка</h1>
                 </div>  
             </div>
@@ -24,11 +24,18 @@
                 <div class="bouquet-list">
                     <h1 class="bouquet-list-title">Ваш Букет:</h1>
                     <div class="selected-products">
-                        <h1>sdaasdd</h1>
+                        <p>Тут будуть компоненти вашого букету</p>
                     </div>
                     <div class="buttons-container">
-                        <button class="left-button"><h1 class="button-text">< НАЗАД</h1></button>
-                        <button class="right-button"><h1 class="button-text">ДАЛІ ></h1></button>
+                        <button class="left-button" (click)="previousStepButton()">
+                            <h1 class="button-text">< НАЗАД</h1>
+                        </button>
+                        <button class="right-button" (click)="nextStepButton()" *ngIf="currentSubPageIndex!=2">
+                            <h1 class="button-text">ДАЛІ ></h1>
+                        </button>
+                        <button class="right-button" (click)="toCartButton()" *ngIf="currentSubPageIndex==2" >
+                            <h1 class="button-text">В КОРЗИНУ</h1>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -37,12 +44,16 @@
 
             <div class="products-container">
                 <div class="products">
-                    <div fxLayout="row wrap" fxLayoutGap="30px grid">
+                    <!-- <div fxLayout="row wrap" fxLayoutGap="30px grid">
                         <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.gt-sm="33%" 
                             *ngFor="let product of products">
                             <app-store-item [product]="product"></app-store-item>
                         </div>
-                    </div> 
+                    </div>  -->
+                    <h1>{{currentSubPageIndex}}</h1>
+                    <h1 *ngIf="flowerSubPage">flower</h1>
+                    <h1 *ngIf="wrapperSubPage">wraper</h1>
+                    <h1 *ngIf="ropeSubPage">rope</h1>
                 </div>
             </div>
 
