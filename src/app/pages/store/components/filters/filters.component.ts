@@ -41,4 +41,14 @@ export class FiltersComponent implements OnInit {
     this.storeServise.getFiltredProducts(this.storeItemsFilter);
   }
 
+  SelectedProductTypeChangeHandler($event:any){
+    this.storeItemsFilter.type = $event;
+    this.storeServise.getFiltredProducts(this.storeItemsFilter);
+  }
+
+  SelectedProductAppointmentsChangeHandler($event:any){
+    this.storeItemsFilter.appointments = $event;
+    this.storeServise.getFiltredProducts(this.storeItemsFilter);
+  }
+
 }

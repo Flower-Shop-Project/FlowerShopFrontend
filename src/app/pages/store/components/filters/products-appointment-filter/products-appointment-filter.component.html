@@ -1,0 +1,13 @@
+<mat-expansion-panel class="mat-elevation-z0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Для кого</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-selection-list (selectionChange)="selectionChange(appointmentss.selectedOptions.selected)" #appointmentss>
+      <mat-list-option checkboxPosition="before" *ngFor="let appointment of appointments" [value]="appointment">
+        {{appointment.displayedName}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-expansion-panel>
+  <mat-divider></mat-divider>

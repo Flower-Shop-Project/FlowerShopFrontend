@@ -25,7 +25,7 @@ export class StoreComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getMockProducts();
+    this.getProducts();
 
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {

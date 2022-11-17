@@ -32,13 +32,13 @@ import { StoreItemComponent } from './pages/store/components/store-item/store-it
 import { FiltersComponent } from './pages/store/components/filters/filters.component';
 import { PlusMinusButtonComponent } from './components/plus-minus-button/plus-minus-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { HttpClientModule } from '@angular/common/http';
 import { FlowersTypeFilterComponent } from './pages/store/components/filters/flowers-type-filter/flowers-type-filter.component';
 import { ProductsPriceFilterComponent } from './pages/store/components/filters/products-price-filter/products-price-filter.component';
 import { ProductsTypeFilterComponent } from './pages/store/components/filters/products-type-filter/products-type-filter.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
 import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
+import { ProductsAppointmentFilterComponent } from './pages/store/components/filters/products-appointment-filter/products-appointment-filter.component';
 
 
 @NgModule({
@@ -57,10 +57,11 @@ import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-pag
     SearchbarComponent,
     FlowersTypeFilterComponent,
     ProductsPriceFilterComponent,
-    ProductsTypeFilterComponent
+    ProductsTypeFilterComponent,
     DeliveryComponent,
     BlogPreviewComponent,
-    FullBlogPageComponent
+    FullBlogPageComponent,
+    ProductsAppointmentFilterComponent
   ],
   imports: [
     BrowserModule,
