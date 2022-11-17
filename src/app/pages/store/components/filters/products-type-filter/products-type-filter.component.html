@@ -4,6 +4,10 @@
         <h3>Тип</h3>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+    <mat-selection-list (selectionChange)="selectionChange($event)" #productTypes>
+      <mat-list-option checkboxPosition="before" *ngFor="let type of typesOfProducts" [selected]="type.selected" [value]="type">
+        {{type.displayedName}}
+      </mat-list-option>
+    </mat-selection-list>
   </mat-expansion-panel>
   <mat-divider></mat-divider>
