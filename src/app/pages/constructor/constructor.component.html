@@ -1,1 +1,53 @@
-<p>constructor works!</p>
+<div class="backGround">   
+    <div class="container">
+        <app-page-top-baner></app-page-top-baner>
+        <!-- navigation-container -->
+        <div class = "constructor-navigation-container">
+            <div class = "constructor-navigation">
+                <div class="constructor-navigation-button">
+                    <h1>Квіти</h1>
+                </div>
+                <div class="constructor-navigation-button">
+                    <h1>Обгортка</h1>
+                </div> 
+                <div class="constructor-navigation-button">
+                    <h1>Мотузка</h1>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="constructor-container">
+
+            <!-- bouquet-list-container -->
+
+            <div class="bouquet-list-container">
+                <div class="bouquet-list">
+                    <h1 class="bouquet-list-title">Ваш Букет:</h1>
+                    <div class="selected-products">
+                        <h1>sdaasdd</h1>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="left-button"><h1 class="button-text">< НАЗАД</h1></button>
+                        <button class="right-button"><h1 class="button-text">ДАЛІ ></h1></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- products-container -->
+
+            <div class="products-container">
+                <div class="products">
+                    <div fxLayout="row wrap" fxLayoutGap="30px grid">
+                        <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.gt-sm="33%" 
+                            *ngFor="let product of products">
+                            <app-store-item [product]="product"></app-store-item>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <!--  end  -->
+
+        </div>
+    </div>
+</div>

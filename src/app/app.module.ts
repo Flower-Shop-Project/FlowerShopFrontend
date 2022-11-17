@@ -39,6 +39,9 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
 import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
 import { ProductsAppointmentFilterComponent } from './pages/store/components/filters/products-appointment-filter/products-appointment-filter.component';
+import { PageTopBanerComponent } from './components/page-top-baner/page-top-baner.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 
 @NgModule({
@@ -61,7 +64,10 @@ import { ProductsAppointmentFilterComponent } from './pages/store/components/fil
     DeliveryComponent,
     BlogPreviewComponent,
     FullBlogPageComponent,
-    ProductsAppointmentFilterComponent
+    ProductsAppointmentFilterComponent,
+    PageTopBanerComponent,
+    CartComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,
