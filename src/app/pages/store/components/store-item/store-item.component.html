@@ -1,7 +1,7 @@
 <div class="card" [@itemState]="state" (mouseenter)="hover()" (mouseleave)="leave()">
-    <img class="clickable" [src]="product?.imageUrl" style="width: 100%" (click)="onClick()">
+    <img class="clickable" [src]="product?.imageUrl" style="width: 100%" routerLink="/product/{{product?.id}}">
     <div class="info">
-        <p class="clickable" (click)="onClick()">{{product?.name}}</p>
+        <p class="clickable" routerLink="/product{{product?.id}}">{{product?.name}}</p>
         <h2>{{product?.price | currency}}</h2>
     </div>
     <div class="actions" [ngClass]="{'hidden': actionsHidden}">

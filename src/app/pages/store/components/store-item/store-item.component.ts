@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StoreItem } from 'src/app/models/StoreItem.model';
 
 @Component({
@@ -25,7 +26,7 @@ import { StoreItem } from 'src/app/models/StoreItem.model';
 export class StoreItemComponent implements OnInit {
   @Input() product: StoreItem | undefined;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -48,9 +49,5 @@ export class StoreItemComponent implements OnInit {
 
   addToCart() {
     console.log('Add to cart' + this.product?.name);
-  }
-
-  onClick() {
-    console.log('Clicked ' + this.product?.name);
   }
 }
