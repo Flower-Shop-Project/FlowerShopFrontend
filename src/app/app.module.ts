@@ -38,6 +38,7 @@ import { ProductsTypeFilterComponent } from './pages/store/components/filters/pr
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { BlogPreviewComponent } from './components/blog-preview/blog-preview.component';
 import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-page.component';
+import { ProductComponent } from './pages/product/product.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { FullBlogPageComponent } from './pages/blog/full-blog-page/full-blog-pag
     DeliveryComponent,
     BlogPreviewComponent,
     FullBlogPageComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
