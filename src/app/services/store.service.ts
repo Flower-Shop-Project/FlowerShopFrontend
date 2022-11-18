@@ -20,20 +20,20 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   getAllProducts(): void {
-    this.http.get<Array<StoreItem>>(this.api + 'Product/GetAll').subscribe(next=>{
+    this.http.get<Array<StoreItem>>(this.api + 'Product/GetAll').subscribe(next => {
       this.products.next(next);
     });
   }
 
-  getFiltredProducts(filter:StoreItemsFilter): void {
+  getFiltredProducts(filter: StoreItemsFilter): void {
     let queryParams = new HttpParams();
-  
+
     Object.entries(filter).forEach(([key, value]: [string, string | number | string[]]) => {
-      if(value != null)
-        queryParams = queryParams.appendAll({[key]: value});
+      if (value != null)
+        queryParams = queryParams.appendAll({ [key]: value });
     });
 
-    this.http.get<Array<StoreItem>>(this.api + 'Product/GetByQuery?' + queryParams.toString()).subscribe(next=>{
+    this.http.get<Array<StoreItem>>(this.api + 'Product/GetByQuery?' + queryParams.toString()).subscribe(next => {
       this.products.next(next);
     });
   }

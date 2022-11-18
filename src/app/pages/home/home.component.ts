@@ -104,6 +104,8 @@ export class HomeComponent implements OnInit {
       });
 
       this.popularProducts = data;
+      this.roseProducts = data;
+      this.chrysProducts = data;
     });
   }
 
@@ -129,12 +131,12 @@ export class HomeComponent implements OnInit {
 
   bannerButton1() {
     this.router.navigate(['store/'], {
-      queryParams: { 'FlowerTypes': "roses" },
+      queryParams: { 'flowerTypes': "roses" },
     });
   }
   bannerButton2() {
-    this.router.navigate(['store/'], { //TODO edit flowertype
-      queryParams: { 'FlowerTypes': "chrys" },
+    this.router.navigate(['store/'], {
+      queryParams: { 'flowerTypes': "chrysanthemums" },
     });
   }
 
@@ -148,9 +150,9 @@ export class HomeComponent implements OnInit {
       queryParams: { 'Type': "bouquet" },
     });
   }
-  cat3() {  //TODO change to pot
+  cat3() {
     this.router.navigate(['store/'], {
-      queryParams: { 'Type': "basket" },
+      queryParams: { 'Type': "pot" },
     });
   }
 

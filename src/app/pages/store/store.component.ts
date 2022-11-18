@@ -19,7 +19,6 @@ export class StoreComponent implements OnInit {
   products: Array<StoreItem> = [];
   mode: MatDrawerMode = "side";
   opened: boolean = true;
-  queryParams = {};
   search = "";
 
   constructor(
@@ -30,12 +29,10 @@ export class StoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.queryParams = { params };
       this.searchProduct(params);
     });
 
     // this.getMockProducts();
-
 
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
@@ -53,6 +50,9 @@ export class StoreComponent implements OnInit {
 
   searchProduct(params: Params) {
     this.storeServise.searchProduct(params).subscribe((data) => {
+      data.forEach((item) => {
+        item.imageUrl = `http://18.198.2.151/images/${item.imageUrl}`;
+      });
       this.products = data;
     });
   }

@@ -19,12 +19,14 @@ const routes: Routes = [
   { path: 'delivery', component: DeliveryComponent },
   { path: 'fullBlog', component: FullBlogPageComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'cart', component: CartComponent},
+  { path: 'cart', component: CartComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

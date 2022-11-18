@@ -16,7 +16,7 @@ SwiperCore.use([FreeMode, Navigation, Thumbs, Autoplay]);
 export class ProductComponent implements OnInit {
   thumbsSwiper: any;
   id = 0;
-  product = <Product>{ name: "Loading...", description: "Loading...", images: ["Loading..."], price: 0 };
+  product = <Product>{};
   popularProducts: Array<StoreItem> = [];
 
   popularConfig: SwiperOptions = {
@@ -44,6 +44,7 @@ export class ProductComponent implements OnInit {
   constructor(private route: ActivatedRoute, private storeServise: StoreService) { }
 
   ngOnInit(): void {
+    
     this.route.params.subscribe(params => {
       this.id = params['id'];
     });
