@@ -1,0 +1,35 @@
+<div class="backGround">
+    <div class="container">
+        <app-page-top-baner></app-page-top-baner>
+
+        <div class="data-container top-block">
+            <h1 class="cart-title">Ваше замовлення:</h1>
+            <div class="button clear-button">
+                <img class="trash-icon" src = "./assets/img/trash.png">
+                <p class="button-text">очистити корзину</p>
+            </div>
+        </div>
+
+        <div class="data-container">
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+            <app-cart-item></app-cart-item>
+        </div>
+        <h1 class="check-amount-text">{{checkAmountText}}</h1>
+
+        <div class="top-block">
+            <div class="button continue-button" (click)="goToStore()">
+                <p class="button-text continue-text">продовжити покупки</p>
+            </div>
+
+            <button class="order-button">
+                <h2 class="order-button-text">Оформити замовлення</h2>
+            </button>
+        </div>
+        
+        
+    </div>
+</div>

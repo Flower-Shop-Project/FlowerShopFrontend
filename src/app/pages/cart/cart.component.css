@@ -1,0 +1,126 @@
+.backGround{
+    height: 100%;
+    width: 100%;
+    background-image: url("\src\assets\img\blog\background.jpg"); 
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 1300px;
+    height: 100%;
+    background-color:white;
+    margin-bottom: 120px;
+}
+
+.buttons-container{
+    height: 150px;
+
+}
+
+.data-container{
+    width: 70%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(231, 231, 231);
+}
+.cart-title, .trash-icon, .button-text,.button{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+.button{
+    display: flex; 
+    height: fit-content;
+    width: fit-content;
+    cursor:pointer;
+}
+
+h1{
+    padding-left: 1.5rem;
+    font-size: 21.5pt;
+    font-weight: 400;
+}
+
+.button-text{
+    font-size: 15pt;
+    padding: 2rem;
+}
+
+.trash-icon{
+    height: 40px;
+    padding-left: 2rem;
+}
+
+.top-block{
+    display: flex; 
+    height: fit-content;
+    margin-top: 2rem; 
+}
+
+.continue-text{
+    color: #FF8A8A;
+}
+
+.clear-button{
+    margin-left: auto;
+}
+
+.continue-button{
+    margin-right: auto;
+    margin-left: 15%;
+}
+
+.order-button-text{
+    padding-top: 13px;
+    font-size: 14pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    
+}
+
+.order-button{
+    width: 35%;
+    margin-right: 15%;
+    border-radius: 40px;
+    border-color: rgba(240, 248, 255, 0);
+    background-color: rgb(255, 138, 138);
+}
+
+.order-button:hover{
+    background-color: white;
+    border-color:rgb(255, 138, 138);
+}
+
+.order-button:hover .order-button-text{
+    color: rgb(255, 138, 138);
+}
+
+.check-amount-text{
+    text-align: left;
+    margin-left: 15%;
+    padding:2rem;
+}
+
+.button:hover{
+    color: #FF8A8A;
+    background-color: rgb(238, 238, 238);
+}
+
+@media screen and (max-width: 1200px) {
+    .data-container{
+        width: 90%;
+    }
+    .order-button{
+        margin-right: 5%;
+    }
+    .continue-button, .check-amount-text{
+        margin-left: 5%;
+    }
+    
+     
+ }

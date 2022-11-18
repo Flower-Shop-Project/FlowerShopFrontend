@@ -36,6 +36,7 @@ export class StoreComponent implements OnInit {
 
     // this.getMockProducts();
 
+
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
         this.activeMediaQuery = item ? `'${item.mqAlias}' = (${item.mediaQuery})` : '';
@@ -65,7 +66,8 @@ export class StoreComponent implements OnInit {
   }
 
   getProducts(): void {
-    this.productsSubscription = this.storeServise.getAllProducts().subscribe((data) => {
+    this.storeServise.getAllProducts();
+    this.productsSubscription = this.storeServise.products$.subscribe((data) => {
       data.forEach((item) => {
         item.imageUrl = `https://18.198.2.151/images/${item.imageUrl}`;
       });

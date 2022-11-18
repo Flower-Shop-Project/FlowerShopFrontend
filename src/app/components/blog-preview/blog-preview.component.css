@@ -18,11 +18,8 @@ button{
     width: 35%;
     margin-left: 2rem;
     border-radius: 40px;
-    background-color: white;
     border-color: rgba(240, 248, 255, 0);
-    background-color: rgb(255, 138, 138);
-    
-    
+    background-color: rgb(255, 138, 138);   
 }
 .button-text{
     padding-top: 13px;

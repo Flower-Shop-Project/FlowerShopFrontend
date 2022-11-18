@@ -13,11 +13,15 @@
 
                 <mat-divider></mat-divider>
 
-              <app-products-price-filter></app-products-price-filter>
+              <app-products-price-filter (PriceRangeChanged)="PriceRangeChangeHandler($event)"></app-products-price-filter>
 
                 <mat-divider></mat-divider>
 
-              <app-products-type-filter></app-products-type-filter>
+              <app-products-type-filter (SelectedProductTypeChanged)="SelectedProductTypeChangeHandler($event)"></app-products-type-filter>
+
+                <mat-divider></mat-divider>
+
+              <app-products-appointment-filter (SelectedProductAppointmentsChanged)="SelectedProductAppointmentsChangeHandler($event)"></app-products-appointment-filter>
 
               </mat-accordion>
         </div>
