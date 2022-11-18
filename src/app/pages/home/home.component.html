@@ -27,7 +27,7 @@
 
                         <p class="description2">Знижка <span style="font-weight: 599; font-size:30px">до 25%</span> грн
                         </p>
-                        <button mat-raised-button class="banner-button" (click)="bannerButton1()">
+                        <button mat-raised-button class="banner-button" (click)="bannerButton2()">
                             Перейти до категорії
                         </button>
                     </div>
@@ -36,40 +36,52 @@
         </ng-template>
     </swiper>
 </div>
-<div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="45px" #categories class="categories">
-    <div fxFlex.gt-sm=" 33%" class="category">
-        <img src="assets/img/cat1.jpg" alt="" style="width: 100%">
-        <div class="category-text">
-            <p>Кошики</p>
+<div class="maincontent">
+    <div fxLayout="row" fxLayoutAlign="center start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center"
+        fxLayoutGap="45px" fxLayoutGap.sm="45px" class="categories">
+        <div fxFlex="33%" class="category">
+            <img src="assets/img/cat1.jpg" alt="" (click)="cat1()">
+            <div class="category-text">
+                <p>Кошики</p>
+            </div>
+        </div>
+        <div fxFlex="33%" class="category">
+            <img src="assets/img/cat2.jpg" alt="" (click)="cat2()">
+            <div class="category-text">
+                <p>Букети</p>
+            </div>
+        </div>
+        <div fxFlex="33%" class="category">
+            <img src="assets/img/cat3.jpg" alt="" (click)="cat3()">
+            <div class="category-text">
+                <p>Квіти в горщиках</p>
+            </div>
         </div>
     </div>
-    <div fxFlex="33%" class="category">
-        <img src="assets/img/cat2.jpg" alt="" style="width: 100%">
-        <div class="category-text">
-            <p>Букети</p>
-        </div>
+
+    <div class="popular">
+        <h1 class=" slider-title">Популярні товари</h1>
+        <swiper #popularSwiper class="popular-swiper" [config]="popularConfig">
+            <ng-template class="popular-slide" *ngFor="let popular of popularProducts" swiperSlide>
+                <app-store-item [product]="popular"></app-store-item>
+            </ng-template>
+        </swiper>
     </div>
-    <div fxFlex="33%" class="category">
-        <img src="assets/img/cat3.jpg" alt="" style="width: 100%">
-        <div class="category-text">
-            <p>Квіти в горщиках</p>
-        </div>
+    <div class="roses">
+        <h1 class="slider-title">Букети з троянд</h1>
+        <swiper #roseSwiper class="popular-swiper" [config]="roseConfig">
+            <ng-template class="rose-slide" *ngFor="let product of roseProducts" swiperSlide>
+                <app-store-item [product]="product"></app-store-item>
+            </ng-template>
+        </swiper>
     </div>
-</div>
-<div>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
-    <h5>this is some text</h5>
+    <div class="roses">
+        <h1 class="slider-title">Букети з гортензій</h1>
+        <swiper #hortenzSwiper class="popular-swiper" [config]="roseConfig">
+            <ng-template class="rose-slide" *ngFor="let product of chrysProducts" swiperSlide>
+                <app-store-item [product]="product"></app-store-item>
+            </ng-template>
+        </swiper>
+    </div>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Fkv49VNDDGh4qAspqO1GeqUIdXn86Aw&ehbc=2E312F"></iframe>
 </div>

@@ -1,4 +1,4 @@
-<mat-drawer-container [autosize]="true">
+<mat-drawer-container>
     <mat-drawer class="drawer" #drawer [mode]="mode" [opened]="opened">
         <app-filters [Drawer]="drawer"></app-filters>
     </mat-drawer>
@@ -10,8 +10,8 @@
                 </button>
                 <app-searchbar></app-searchbar>
             </div>
-            <div fxLayout="row wrap" fxLayoutGap="16px grid">
-                <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.gt-sm="33%" fxFlex.gt-lg="20%"
+            <div fxLayout="row wrap" fxLayoutGap="0px grid">
+                <div fxFlex.xs="100%" fxFlex.gt-xs="50%" fxFlex.gt-md="33%" fxFlex.gt-lg="20%"
                     *ngFor="let product of products">
                     <app-store-item [product]="product"></app-store-item>
                 </div>

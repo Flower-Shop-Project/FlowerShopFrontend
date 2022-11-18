@@ -5,6 +5,17 @@ export interface StoreItem {
     price: number;
 }
 
+export interface Product {
+    id: number;
+    name: string;
+    description: string;
+    images: Array<string>;
+    price: number;
+    type: string;
+    flowerTypes: Array<string>;
+    apointments: Array<string>;
+}
+
 export const MOCKPRODUCTS: StoreItem[] = [
     {
         id: 1,

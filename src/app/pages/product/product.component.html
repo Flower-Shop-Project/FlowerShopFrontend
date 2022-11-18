@@ -1,0 +1,38 @@
+<div class="maincontent">
+    <div class="gallery" fxLayout="column" fxLayout.gt-sm="row">
+        <div class="gallery-images" fxFlex="50%">
+            <swiper #mySwiper2 style="--swiper-navigation-color: black;" [loop]=" true" [spaceBetween]="10"
+                [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+                <ng-template swiperSlide *ngFor="let p of product.images"><img [src]="p" /></ng-template>
+            </swiper>
+            <swiper #mySwiper (swiper)="thumbsSwiper = $event" [loop]="true" [spaceBetween]="10" [slidesPerView]="4"
+                [freeMode]="true" [watchSlidesProgress]="true" class="mySwiper">
+                <ng-template swiperSlide *ngFor="let p of product.images"><img [src]="p" /></ng-template>
+            </swiper>
+        </div>
+        <mat-divider class="mat-divider" fxHide.lt-md vertical></mat-divider>
+        <div class="info" fxFlex="50%">
+            <h1>{{product.name}}</h1>
+            <p>{{product.description}}</p>
+            <div class="price">
+                <h2>{{product.price}}</h2>
+            </div>
+
+            <div class="actions">
+                <app-plus-minus-button></app-plus-minus-button>
+                <button mat-button mat-icon-button class="button" (click)="addToCart()">В кошик<mat-icon>shopping_cart
+                    </mat-icon></button>
+            </div>
+        </div>
+    </div>
+    <div class="popular">
+        <h1 class="slider-title">Дивіться також</h1>
+        <swiper #popularSwiper class="popular-swiper" [config]="popularConfig">
+            <ng-template class="popular-slide" *ngFor="let popular of popularProducts" swiperSlide>
+                <app-store-item [product]="popular"></app-store-item>
+            </ng-template>
+        </swiper>
+    </div>
+
+
+</div>

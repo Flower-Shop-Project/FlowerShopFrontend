@@ -1,7 +1,7 @@
-<footer class="footer">
+<footer class="footer" ngStyle.gt-sm="height: 450px">
     <div class="footer-container">
-        <div class="footer-row">
-            <div class="footer-column contacts">
+        <div class="footer-row" fxLayout.xs="column">
+            <div class="footer-column contacts" fxFlexAlign.xs="center">
                 <div class="footer-logo-text"><span>FlowerShop</span></div>
                 <div class="contacts-container">
                     <div class="column-item contacts-item"><span>(068) 546-4356</span></div>
@@ -11,25 +11,20 @@
             <div class="footer-column locations">
                 <div class="locations-title"><span>Наші відділення</span></div>
                 <div class="locations-container">
-                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>345
-                            Faulconer
-                            Drive, Suite 4 • Charlottesville, CA, 12345</span></div>
-                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>345
-                            Faulconer
-                            Drive, Suite 4 • Charlottesville, CA, 12345</span></div>
-                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>345
-                            Faulconer
-                            Drive, Suite 4 • Charlottesville, CA, 12345</span></div>
-                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>345
-                            Faulconer
-                            Drive, Suite 4 • Charlottesville, CA, 12345</span></div>
+                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>вулиця
+                            Заньковецької, 89, Ужгород, Закарпатська область</span></div>
+                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>вулиця
+                            Університетська, 14, Ужгород, Закарпатська область</span></div>
+                    <div class="column-item"><img src="./assets/img/location-icon.svg" alt="shopping-cart"><span>вулиця
+                            8-го Березня, 33, Ужгород, Закарпатська область</span></div>
                 </div>
             </div>
-            <div class="footer-column navigation">
-                <div class="column-item"><span>Про нас</span></div>
-                <div class="column-item"><span>Наші відділення</span></div>
-                <div class="column-item"><span>Оплата та доставка</span></div>
-                <div class="column-item"><span>Наш блог</span></div>
+            <div class="footer-column navigation" ngStyle.xs="text-align: center; font-size: 22px; line-height: 30px"
+                fxFlexAlign.xs="center">
+                <div class="column-item"><span routerLink="about">Про нас</span></div>
+                <div class="column-item"><span routerLink="delivery">Наші відділення</span></div>
+                <div class="column-item"><span routerLink="delivery">Оплата та доставка</span></div>
+                <div class="column-item"><span routerLink="blog">Наш блог</span></div>
             </div>
         </div>
         <div class="footer-row last-row">

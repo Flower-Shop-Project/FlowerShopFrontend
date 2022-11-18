@@ -1,27 +1,42 @@
+.card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 img {
     border-radius: 20px;
     margin: 0;
+    z-index: 3;
 }
 
 p {
     margin: 0;
+    font-size: 16px;
 }
 
 h2 {
-    margin: 10px 0 0 0;
+    margin: 10px 0;
 }
 
 .info {
     margin: 0 10px;
+    margin-top: 10px;
 }
 
 .actions {
+    padding: 0 20px 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
     gap: 16px;
+    transition: all 0.1s ease-in;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 .addToCart {
@@ -38,4 +53,8 @@ h2 {
 app-plus-minus-button {
     width: 0;
     flex: 1;
+}
+
+.clickable {
+    cursor: pointer;
 }

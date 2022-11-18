@@ -4,6 +4,7 @@ import { StoreService } from 'src/app/services/store.service';
 import { MatDrawerMode } from '@angular/material/sidenav';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-store',
@@ -18,14 +19,23 @@ export class StoreComponent implements OnInit {
   products: Array<StoreItem> = [];
   mode: MatDrawerMode = "side";
   opened: boolean = true;
+  queryParams = {};
+  search = "";
 
   constructor(
     private mediaObserver: MediaObserver,
-    private storeServise: StoreService
+    private storeServise: StoreService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.getProducts();
+    this.route.queryParams.subscribe((params) => {
+      this.queryParams = { params };
+      this.searchProduct(params);
+    });
+
+    // this.getMockProducts();
+
 
     this.mediaSubscription = this.mediaObserver.asObservable().subscribe((change) => {
       change.forEach((item) => {
@@ -37,6 +47,13 @@ export class StoreComponent implements OnInit {
           this.openDrawer();
         }
       });
+    });
+
+  }
+
+  searchProduct(params: Params) {
+    this.storeServise.searchProduct(params).subscribe((data) => {
+      this.products = data;
     });
   }
 
@@ -52,7 +69,7 @@ export class StoreComponent implements OnInit {
     this.storeServise.getAllProducts();
     this.productsSubscription = this.storeServise.products$.subscribe((data) => {
       data.forEach((item) => {
-        item.imageUrl = `https://localhost:7006/images/${item.imageUrl}`;
+        item.imageUrl = `https://18.198.2.151/images/${item.imageUrl}`;
       });
 
       this.products = data;
